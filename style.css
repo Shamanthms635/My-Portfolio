@@ -106,6 +106,7 @@ body {
     font-weight: 500;
     transition: all 0.2s ease;
     position: relative;
+    padding: 8px 0;
 }
 
 .nav-link::after {
@@ -132,6 +133,7 @@ body {
     display: none;
     flex-direction: column;
     cursor: pointer;
+    padding: 5px;
 }
 
 .bar {
@@ -153,11 +155,13 @@ body {
     text-align: center;
     position: relative;
     padding: 0 20px;
+    padding-top: 70px; /* Account for fixed navbar */
 }
 
 .hero-content {
     max-width: 800px;
     margin-bottom: 4rem;
+    width: 100%;
 }
 
 .hero-title {
@@ -165,6 +169,7 @@ body {
     margin-bottom: 1rem;
     color: white;
     text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    line-height: 1.2;
 }
 
 .greeting {
@@ -197,6 +202,7 @@ body {
     color: rgba(255, 255, 255, 0.9);
     margin-bottom: 3rem;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    line-height: 1.4;
 }
 
 .hero-buttons {
@@ -204,6 +210,7 @@ body {
     gap: 1rem;
     justify-content: center;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 /* Buttons */
@@ -364,6 +371,9 @@ section {
     text-align: center;
     box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
     transition: transform 0.2s ease;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
 }
 
 .profile-card:hover {
@@ -672,6 +682,7 @@ section {
         text-align: center;
         transition: 0.3s;
         padding: 2rem 0;
+        box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
     }
 
     .nav-menu.active {
@@ -694,8 +705,14 @@ section {
         transform: translateY(-8px) rotate(-45deg);
     }
 
+    .hero {
+        padding-top: 90px;
+        min-height: calc(100vh - 70px);
+    }
+
     .hero-title {
         font-size: 2.5rem;
+        line-height: 1.1;
     }
 
     .greeting {
@@ -704,20 +721,36 @@ section {
 
     .hero-subtitle {
         font-size: 1.2rem;
+        margin-bottom: 2rem;
     }
 
     .hero-buttons {
         flex-direction: column;
         align-items: center;
+        gap: 1rem;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .btn {
+        width: 100%;
+        justify-content: center;
     }
 
     .section-title {
         font-size: 2rem;
+        margin-bottom: 3rem;
     }
 
     .about-content {
         grid-template-columns: 1fr;
         gap: 2rem;
+        text-align: center;
+    }
+
+    .about-text p {
+        font-size: 1.1rem;
+        text-align: left;
     }
 
     .contact-content {
@@ -747,6 +780,10 @@ section {
     section {
         padding: 80px 0;
     }
+
+    .container {
+        padding: 0 20px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -756,10 +793,12 @@ section {
 
     .hero {
         padding: 0 15px;
+        padding-top: 80px;
     }
 
     .hero-title {
         font-size: 2rem;
+        line-height: 1.1;
     }
 
     .greeting {
@@ -768,35 +807,46 @@ section {
 
     .hero-subtitle {
         font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-buttons {
+        gap: 0.8rem;
+        max-width: 280px;
     }
 
     .btn {
-        padding: 12px 24px;
+        padding: 12px 20px;
         font-size: 0.9rem;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+
+    .about-text p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .profile-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .profile-img i {
+        font-size: 2.5rem;
     }
 
     .skills-grid,
     .cert-grid {
         grid-template-columns: 1fr;
+        gap: 1rem;
     }
 
-    section {
-        padding: 60px 0;
-    }
-    
-    .nav-container {
-        padding: 0 15px;
-    }
-    
-    .hero-buttons {
-        gap: 0.8rem;
-    }
-    
-    .btn {
-        padding: 10px 20px;
-        font-size: 0.85rem;
-    }
-    
     .skill-category,
     .cert-card {
         padding: 1.5rem;
@@ -813,6 +863,18 @@ section {
     
     .contact-form {
         padding: 1.5rem;
+    }
+
+    section {
+        padding: 60px 0;
+    }
+    
+    .nav-container {
+        padding: 0 15px;
+    }
+    
+    .nav-logo span {
+        font-size: 1.3rem;
     }
 }
 
